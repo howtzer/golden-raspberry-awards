@@ -1,0 +1,30 @@
+
+#para rodar o projeto é necessário seguir os seguintes passos:
+
+# 1 - instalar o gerenciador de pacotes do projeto:
+
+pip install --user pipenv
+
+# 2 - para instalar as dependencias basta rodar um dos comandos abaixo
+
+pipenv install Pipfile
+
+ou
+
+pip install -r requirements.txt 
+
+
+# 3 - então é necessário inicializar o ambiente configurado (caso tenha instalado
+# as dependencias via pip, não é necessário esta etapa):
+
+pipenv shell
+
+# 4- após instalar as dependencias é necessário rodar o projeto:
+
+export FLASK_APP=app.py
+flask run
+
+
+#os testes de integração do projeto podem ser executados atraves deste comando:
+python -m unittest discover -s tests -p "*_test.py"
+
